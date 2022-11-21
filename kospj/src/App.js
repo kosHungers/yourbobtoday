@@ -8,6 +8,7 @@ function App() {
             <Header></Header>
             <Group></Group>
             <Nav></Nav>
+            
         </div>
     );
 }
