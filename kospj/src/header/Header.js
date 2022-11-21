@@ -1,13 +1,16 @@
 import Button from "./button/Button";
+import "bootstrap/dist/css/bootstrap.css";
+import Search from "./search/Search";
 
 function Header() {
     return (
-        <header>
-            <h1>부평 맛집 찾는 어플리케이션</h1>
+        <header className="d-flex flex-row justify-content-center">
+            <h1 className="visually-hidden">부평 맛집 찾는 어플리케이션</h1>
             <article class="search-bar">
-                <h2>검색창</h2>
-                <input type="text" />
-                <button type="button">매그니파이어</button>
+                <h2 className="visually-hidden">검색창</h2>
+                <Search />
+                {/* <input type="text" />
+                <button type="button">매그니파이어</button> */}
                 <div class="category">
                     <Button></Button>
                     {/* <label for="all">
