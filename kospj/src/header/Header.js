@@ -6,12 +6,12 @@ function Header() {
     return (
         <header className="d-flex flex-row justify-content-center">
             <h1 className="visually-hidden">부평 맛집 찾는 어플리케이션</h1>
-            <article class="search-bar">
+            <article className="search-bar">
                 <h2 className="visually-hidden">검색창</h2>
                 <Search />
                 {/* <input type="text" />
                 <button type="button">매그니파이어</button> */}
-                <div class="category">
+                <div className="category">
                     <Button></Button>
                     {/* <label for="all">
                         {" "}

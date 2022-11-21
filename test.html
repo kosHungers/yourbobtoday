@@ -8,5 +8,19 @@
 </head>
 <body>
     테스트입니다 성진
+    <script>
+        const api = async () => {
+            
+            
+            let response = await fetch("https://api.odcloud.kr/api/15103411/v1/uddi:efd2cc22-353c-47f0-83e5-abc6dca54f6f?page=1&perPage=66&serviceKey=u4fYi1HGYU9hSz8WINOWYKy2JYZ3hkboNiVoSu5tIOqSGvAJEUOJutQfg8WuE7S2uf0RRdWGMK6OrhwL1ijZ3g%3D%3D");
+            let data = await response.json();
+            console.log(data);
+
+        }
+
+
+        api();
+
+    </script>
 </body>
 </html>
