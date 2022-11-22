@@ -35,3 +35,5 @@ function ToggleButtonGroupControlled() {
  * not using it in this example so we will omit it.
  */
 // render(<ToggleButtonGroupControlled />);
+
+export default ToggleButtonGroupControlled;
