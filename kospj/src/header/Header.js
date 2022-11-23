@@ -1,18 +1,14 @@
-import Button from "./button/Button";
-import "bootstrap/dist/css/bootstrap.css";
-import Search from "./search/Search";
+import Button from './button/Button';
+import 'bootstrap/dist/css/bootstrap.css';
+import Search from './search/Search';
 
-function Header({ apiList, setAddnum, setApiList, setMenuOption, menuOption }) {
+function Header({ apiList, setApiList, setMenuOption, menuOption, api }) {
   return (
     <header className="d-flex flex-row justify-content-center">
       <h1 className="visually-hidden">부평 맛집 찾는 어플리케이션</h1>
       <article className="search-bar">
         <h2 className="visually-hidden">검색창</h2>
-        <Search
-          apiList={apiList}
-          setAddnum={setAddnum}
-          setApiList={setApiList}
-        />
+        <Search apiList={apiList} setApiList={setApiList} api={api} />
         {/* <input type="text" />
                 <button type="button">매그니파이어</button> */}
         <div className="category">
