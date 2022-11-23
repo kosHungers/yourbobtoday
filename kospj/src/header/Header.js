@@ -2,24 +2,32 @@ import Button from "./button/Button";
 import "bootstrap/dist/css/bootstrap.css";
 import Search from "./search/Search";
 
-function Header({apiList, setAddnum,setApiList}) {
-    return (
-        <header className="d-flex flex-row justify-content-center">
-            <h1 className="visually-hidden">부평 맛집 찾는 어플리케이션</h1>
-            <article className="search-bar">
-                <h2 className="visually-hidden">검색창</h2>
-                <Search apiList={apiList} setAddnum={setAddnum} setApiList={setApiList}/>
-                {/* <input type="text" />
+function Header({ apiList, setAddnum, setApiList, setMenuOption, menuOption }) {
+  return (
+    <header className="d-flex flex-row justify-content-center">
+      <h1 className="visually-hidden">부평 맛집 찾는 어플리케이션</h1>
+      <article className="search-bar">
+        <h2 className="visually-hidden">검색창</h2>
+        <Search
+          apiList={apiList}
+          setAddnum={setAddnum}
+          setApiList={setApiList}
+        />
+        {/* <input type="text" />
                 <button type="button">매그니파이어</button> */}
-                <div className="category">
-                    <Button></Button>
-                    {/* <label for="all">
+        <div className="category">
+          <Button setMenuOption={setMenuOption} menuOption={menuOption}></Button>
+          {/* <label for="all">
                         {" "}
                         <input id="all" type="checkbox" />
                     </label>
                     <label for="kor">
                         {" "}
                         <input id="kor" type="checkbox" hidden />
+                    </label>
+                    <label for="chn">
+                        {" "}
+                        <input id="chn" type="checkbox" hidden />
                     </label>
                     <label for="jpn">
                         {" "}
@@ -29,14 +37,11 @@ function Header({apiList, setAddnum,setApiList}) {
                         {" "}
                         <input id="wst" type="checkbox" hidden />
                     </label>
-                    <label for="chn">
-                        {" "}
-                        <input id="chn" type="checkbox" hidden />
-                    </label> */}
-                </div>
-            </article>
-        </header>
-    );
+                     */}
+        </div>
+      </article>
+    </header>
+  );
 }
 
 export default Header;
