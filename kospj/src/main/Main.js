@@ -1,6 +1,7 @@
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Col, Row, Container } from "react-bootstrap";
+import ModalPage from "./modal/Modal";
 
 function Group({ apiList, menuOption }) {
   if (!!menuOption.length) {
@@ -40,6 +41,7 @@ function Group({ apiList, menuOption }) {
         <Row>
           {apiList.map((data) => {
             return (
+              
               <Col key={data["연번"]} sm={4} menuoption={data["업태"]}>
                 <CardGroup className="container fluid">
                   <Card>
@@ -51,6 +53,7 @@ function Group({ apiList, menuOption }) {
                     <Card.Body>
                       <Card.Title>{data["업 소 명"]}</Card.Title>
                       <Card.Text>{data["소재지"]}</Card.Text>
+                      <ModalPage data={data}/>
                     </Card.Body>
                     <Card.Footer>
                       <small className="text-muted">{data["전화번호"]}</small>
@@ -58,6 +61,7 @@ function Group({ apiList, menuOption }) {
                   </Card>
                 </CardGroup>
               </Col>
+              
             );
           })}
         </Row>
