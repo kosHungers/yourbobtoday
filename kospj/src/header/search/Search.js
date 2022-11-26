@@ -7,7 +7,7 @@ function FormDisabledExample({ apiList, setApiList, api }) {
   const onChange = (event) => {
     setSearch(event.target.value);
     console.log(search);
-    if (search == '') {
+    if (search === '') {
       api();
     }
   };
